@@ -1,0 +1,18 @@
+.custom-colum-width {
+  --nav-width: 20%;
+  --song-dec-width: 20%;
+  --content-with: calc(100% - var(--nav-width) - var(--song-dec-width));
+  grid-template-columns: var(--nav-width) var(--content-with) var(
+      --song-dec-width
+    );
+}
+
+/* Work arround for Gr icons */
+.icon-gr path {
+  --_color: rgb(209 213 219 / var(--tw-text-opacity));
+  stroke: var(--_color);
+}
+
+.icon-gr:hover path {
+  stroke: rgb(243 244 246 / var(--tw-text-opacity));
+}
