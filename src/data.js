@@ -48,5 +48,29 @@ export function libraries() {
       type: 'Album',
       description: 'David Arnold',
     },
+    {
+      id: 4,
+      name: 'HipHop Tamizha',
+      imgUrl: 'https://source.unsplash.com/random/300×300',
+      pinned: false,
+      type: 'Artist',
+      description: null,
+    },
+    {
+      id: 5,
+      name: 'Emma Hesters',
+      imgUrl: 'https://source.unsplash.com/random/300×300',
+      pinned: false,
+      type: 'Artist',
+      description: null,
+    },
+    {
+      id: 6,
+      name: 'Sherlock',
+      imgUrl: 'https://source.unsplash.com/random/300×300',
+      pinned: false,
+      type: 'Album',
+      description: 'David Arnold',
+    },
   ]
 }
