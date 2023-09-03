@@ -1,7 +1,10 @@
-.custom-colum-width {
+:root {
   --nav-width: 20%;
   --song-dec-width: 20%;
   --content-with: calc(100% - var(--nav-width) - var(--song-dec-width));
+}
+
+.custom-colum-width {
   grid-template-columns: max(var(--nav-width), 320px) var(--content-with) var(
       --song-dec-width
     );

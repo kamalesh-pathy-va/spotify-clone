@@ -10,7 +10,7 @@ export const LibraryItem = ({ album, key }) => {
   const sidenavCollpsed = useSelector(state => state.sidenav.collapsed);
 
   return (
-    <div key={key} className={`grid ${nowPlaying ? 'grid-cols-[3.5rem_auto_1rem]' : 'grid-cols-[3.5rem_auto]'} gap-3 hover:bg-neutral-800 p-2 rounded-md cursor-pointer`}>
+    <div id={key} className={`grid ${nowPlaying ? 'grid-cols-[3.5rem_auto_1rem]' : 'grid-cols-[3.5rem_auto]'} gap-3 hover:bg-neutral-800 p-2 rounded-md cursor-pointer`}>
       <div className={`aspect-square
          ${album.type === 'Artist' ? 'rounded-full' : 'rounded-md'}
          overflow-hidden`}>
