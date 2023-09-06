@@ -72,7 +72,7 @@ export const Library = () => {
           <Chips text="Albums" />
         </div>
       }
-      <div className={`${sidenavCollpsed?'h-[calc(100vh-248px)]':'h-[calc(100vh-300px)]'} overflow-y-auto flex flex-col library-list`}>
+      <div className={`${sidenavCollpsed?'h-[calc(100vh-248px)]':'h-[calc(100vh-300px)]'} overflow-y-auto flex flex-col hide-scrollbar`}>
         {!sidenavCollpsed &&
           <div className='flex w-full text-sm font-normal items-center px-2'>
             <button

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
 import { CgArrowDownO } from 'react-icons/cg'
@@ -41,7 +41,7 @@ const AccountButtons = () => {
 
 export const Topnav = () => {
   return (
-    <div className='fixed bg-neutral-800 w-[--content-with] h-[60px] flex items-center justify-between px-4 rounded-t-md'>
+    <div className='sticky top-0 bg-neutral-800 w-full h-[60px] flex items-center justify-between px-4 rounded-t-md'>
       <HistoryButtons />
       <AccountButtons />
     </div>

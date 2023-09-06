@@ -15,29 +15,31 @@ function App() {
     style = {
       "--nav-width": `${navWidth}%`,
       "--song-dec-width": `${description}%`,
-      "--content-with": "calc(100% - 100px - var(--song-dec-width))",
+      // "--content-with": "calc(100% - 100px - var(--song-dec-width))",
+      "--content-with": "auto",
       "grid-template-columns": "100px var(--content-with) var(--song-dec-width)"
     }
   } else {
     style = {
       "--nav-width": `${navWidth}%`,
       "--song-dec-width": `${description}%`,
-      '--content-with': 'calc(100% - var(--nav-width) - var(--song-dec-width))',
+      // '--content-with': 'calc(100vw - var(--nav-width) - var(--song-dec-width))',
+      "--content-with": "auto",
       "grid-template-columns": ` max(var(--nav-width), 320px) var(--content-with) var(--song-dec-width)`
     }
   }
 
   return (
     <Router>
-      <div className="App grid gap-2 custom-colum-width overflow-hidden text-l font-bold text-neutral-200" style={style}>
+      <div className="App grid gap-2 custom-colum-width text-l font-bold text-neutral-200" style={style}>
         <Sidenav />
-        <div className="col-start-2 mt-2 rounded-md overflow-x-hidden bg-blue-300">
+        <div className={`${description<1 && 'col-span-2'} mt-2 rounded-md w-full overflow-y-auto hide-scrollbar`}>
           <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/search' element={<SearchPage />} />
           </Routes>
         </div>
-        <div>Song info and next in queue</div>
+        <div className={`${description < 1 && 'hidden'}`}>Song info and next in queue</div>
         <div className='text-center col-span-3 w-full bg-red-400 h-16'>audio player</div>
       </div>
     </Router>
