@@ -1,13 +1,18 @@
 import React from 'react'
 import { Topnav } from '../../components/Topnav'
 import { HeroSection } from './HeroSection'
+import { CatogorySections } from '../../components/CatogorySectioins'
 
 export const HomePage = () => {
   return (
     <>
       <Topnav />
-      <div className='h-[calc(100vh-140px)] p-4 main-container'>
+      <div className='flex flex-col gap-10 h-[calc(100vh-140px)] p-4 px-6 main-container'>
         <HeroSection />
+        <CatogorySections />
+        <CatogorySections />
+        <CatogorySections />
+        <CatogorySections />
       </div>
     </>
   )

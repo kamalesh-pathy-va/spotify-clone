@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
 import { CgArrowDownO } from 'react-icons/cg'
+import { FiSearch } from 'react-icons/fi'
 
 const HistoryButton = ({ type, Icon, disable=false }) => {
   return (
@@ -13,7 +14,7 @@ const HistoryButton = ({ type, Icon, disable=false }) => {
 
 const HistoryButtons = () => {
   return (
-    <div className='flex gap-2'>
+    <div className='flex gap-2 items-center'>
       <HistoryButton type='back' Icon={AiOutlineLeft} />
       <HistoryButton type='forward' Icon={AiOutlineRight} disable />
     </div>
@@ -39,10 +40,25 @@ const AccountButtons = () => {
   )
 }
 
-export const Topnav = () => {
+const SearchBar = () => {
   return (
-    <div className='sticky top-0 bg-neutral-800 w-full h-[60px] flex items-center justify-between px-4 rounded-t-md'>
-      <HistoryButtons />
+    <div className='flex items-center bg-neutral-700 rounded-full overflow-hidden'>
+      <FiSearch className='m-3 text-lg'/>
+      <input type="text" className='p-3 pl-0 bg-neutral-700 outline-none font-normal w-64 text-sm placeholder:text-neutral-500' placeholder='What do you want to listen to?' />
+    </div>
+  )
+}
+
+export const Topnav = ({search=false}) => {
+  return (
+    <div className='sticky top-0 bg-neutral-800 w-full h-[60px] flex items-center justify-between px-4 rounded-t-md z-10'>
+      <div className='flex gap-4'>
+        <HistoryButtons />
+        {
+          search &&
+          <SearchBar />
+        }
+      </div>
       <AccountButtons />
     </div>
   )
