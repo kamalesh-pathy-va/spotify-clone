@@ -8,8 +8,6 @@ export const CatogorySections = () => {
   const [noOfCards, setNoOfCards] = useState(6);
 
   useEffect(() => {
-    console.log(mainWidth);
-
     if (mainWidth > 1130) {
       setNoOfCards(6);
     }
