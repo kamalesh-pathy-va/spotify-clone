@@ -44,7 +44,7 @@ const SearchBar = () => {
   return (
     <div className='flex items-center bg-neutral-700 rounded-full overflow-hidden border-2 border-neutral-700 focus-within:border-neutral-100'>
       <FiSearch className='m-3 text-lg'/>
-      <input type="text" className='p-3 pl-0 bg-neutral-700 outline-none font-normal w-80 text-sm placeholder:text-neutral-500' placeholder='What do you want to listen to?' />
+      <input type="text" className='p-3 pl-0 bg-neutral-700 outline-none font-normal w-full  xl:w-80 text-sm placeholder:text-neutral-500' placeholder='What do you want to listen to?' />
     </div>
   )
 }
