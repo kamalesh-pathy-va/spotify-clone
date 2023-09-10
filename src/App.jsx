@@ -3,7 +3,7 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import { Sidenav } from './components/Sidenav';
-import { ErrorPage, HomePage, SearchPage } from './pages';
+import { ErrorPage, HomePage, SearchPage, SongListPage } from './pages';
 import { useEffect, useRef } from 'react';
 import { useElementSize } from './hooks/useElementSize';
 import { setSize } from './features/main/mainSlice';
@@ -46,6 +46,8 @@ function App() {
           <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/search' element={<SearchPage />} />
+            <Route path='/playlist/:listid' element={<SongListPage />} />
+            <Route path='/album/:listid' element={<SongListPage pagetype='album' />} />
             <Route path='*' element={<ErrorPage />} />
           </Routes>
         </div>

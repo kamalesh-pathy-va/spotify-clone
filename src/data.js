@@ -7,6 +7,7 @@ export function libraries() {
       pinned: true,
       type: 'Playlist',
       description: '59 songs',
+      itemURL: '/playlist/randomID',
     },
     {
       id: 2,
@@ -15,6 +16,7 @@ export function libraries() {
       pinned: true,
       type: 'Playlist',
       description: 'Kamaleshpathy VA',
+      itemURL: '/playlist/randomID',
     },
     {
       id: 3,
@@ -23,6 +25,7 @@ export function libraries() {
       pinned: false,
       type: 'Playlist',
       description: 'Kamaleshpathy VA',
+      itemURL: '/playlist/randomID',
     },
     {
       id: 4,
@@ -31,6 +34,7 @@ export function libraries() {
       pinned: false,
       type: 'Artist',
       description: null,
+      itemURL: '/artist/randomID',
     },
     {
       id: 5,
@@ -39,6 +43,7 @@ export function libraries() {
       pinned: false,
       type: 'Artist',
       description: null,
+      itemURL: '/artist/randomID',
     },
     {
       id: 6,
@@ -47,6 +52,7 @@ export function libraries() {
       pinned: false,
       type: 'Album',
       description: 'David Arnold',
+      itemURL: '/album/randomID',
     },
     {
       id: 4,
@@ -55,6 +61,7 @@ export function libraries() {
       pinned: false,
       type: 'Artist',
       description: null,
+      itemURL: '/artist/randomID',
     },
     {
       id: 5,
@@ -63,6 +70,7 @@ export function libraries() {
       pinned: false,
       type: 'Artist',
       description: null,
+      itemURL: '/artist/randomID',
     },
     {
       id: 6,
@@ -71,6 +79,7 @@ export function libraries() {
       pinned: false,
       type: 'Album',
       description: 'David Arnold',
+      itemURL: '/album/randomID',
     },
   ]
 }
