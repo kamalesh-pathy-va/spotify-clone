@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Topnav } from '../../components/Topnav'
 import { CatogorySections } from '../../components/CatogorySectioins'
 import { BrowseAll } from './BrowseAll'
 
 export const SearchPage = () => {
+
+  useEffect(() => {
+    document.title = 'Search - Spotify Clone'
+  }, [])
+
   return (
     <>
       <Topnav search />

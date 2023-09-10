@@ -3,7 +3,7 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import { Sidenav } from './components/Sidenav';
-import { HomePage, SearchPage } from './pages';
+import { ErrorPage, HomePage, SearchPage } from './pages';
 import { useEffect, useRef } from 'react';
 import { useElementSize } from './hooks/useElementSize';
 import { setSize } from './features/main/mainSlice';
@@ -46,6 +46,7 @@ function App() {
           <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/search' element={<SearchPage />} />
+            <Route path='*' element={<ErrorPage />} />
           </Routes>
         </div>
         <div className={`${description < 1 && 'hidden'}`}>Song info and next in queue</div>

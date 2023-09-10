@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Topnav } from '../../components/Topnav'
 import { HeroSection } from './HeroSection'
 import { CatogorySections } from '../../components/CatogorySectioins'
 
 export const HomePage = () => {
+
+  useEffect(() => {
+    document.title = 'Home - Spotify Clone'
+  }, [])
+
   return (
     <>
       <Topnav />
