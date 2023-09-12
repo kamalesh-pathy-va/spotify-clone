@@ -4,17 +4,24 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import { Sidenav } from './components/Sidenav';
 import { ErrorPage, HomePage, SearchPage, SongListPage } from './pages';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useElementSize } from './hooks/useElementSize';
-import { setSize } from './features/main/mainSlice';
+import { setSize, setScroll } from './features/main/mainSlice';
+import { useElementScroll } from './hooks/useElementScroll';
 
 function App() {
   const mainRef = useRef();
+
   const { height: mainHeight, width: mainWidth } = useElementSize(mainRef);
+  const { top: positionTop, left } = useElementScroll(mainRef)
+  
   const dispatch = useDispatch()
+
   const sidenavCollpsed = useSelector(state => state.sidenav.collapsed);
+
   const navWidth = 20;
   const description = 0.5;
+
   let style = {};
 
   if (navWidth < 20 || sidenavCollpsed) {
@@ -37,6 +44,10 @@ function App() {
   useEffect(() => {
     dispatch(setSize({width: mainWidth, height: mainHeight}))
   }, [mainWidth])
+
+  useEffect(() => {
+    dispatch(setScroll({ top: positionTop, left }))
+  }, [positionTop])
 
   return (
     <Router>
