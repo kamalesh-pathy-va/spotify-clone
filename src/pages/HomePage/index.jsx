@@ -12,7 +12,7 @@ export const HomePage = () => {
   return (
     <>
       <Topnav />
-      <div className='flex flex-col gap-10 h-[calc(100vh-140px)] p-4 px-6 main-container'>
+      <div className='flex flex-col gap-10 h-[calc(100vh-164px)] p-4 px-6 main-container'>
         <HeroSection />
         <CatogorySections />
         <CatogorySections />

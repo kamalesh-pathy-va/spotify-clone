@@ -16,7 +16,7 @@ export const SongListPage = ({ pagetype = 'playlist' }) => {
   return (
     <>
       <Topnav />
-      <div className='flex flex-col h-[calc(100vh-140px)] main-container'>
+      <div className='flex flex-col h-[calc(100vh-164px)] main-container'>
         <Banner bannertype={pagetype} />
         <div className='bg-gradient-to-b from-yellow-800 via-yellow-950 via-5% to-neutral-900 to-10%'>
           <div className='flex gap-5 items-center p-5'>

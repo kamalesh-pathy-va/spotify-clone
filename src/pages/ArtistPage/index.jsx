@@ -16,7 +16,7 @@ export const ArtistPage = () => {
   return (
     <>
       <Topnav />
-      <div className='flex flex-col h-[calc(100vh-140px)] main-container'>
+      <div className='flex flex-col h-[calc(100vh-164px)] main-container'>
         <ArtistBanner />
 
         <div className='flex gap-5 items-center p-5'>

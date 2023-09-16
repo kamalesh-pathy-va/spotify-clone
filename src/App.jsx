@@ -8,6 +8,7 @@ import { useEffect, useRef } from 'react';
 import { useElementSize } from './hooks/useElementSize';
 import { setSize, setScroll } from './features/main/mainSlice';
 import { useElementScroll } from './hooks/useElementScroll';
+import { MusicPlayer } from './components/MusicPlayer';
 
 function App() {
   const mainRef = useRef();
@@ -64,7 +65,9 @@ function App() {
           </Routes>
         </div>
         <div className={`${description < 1 && 'hidden'}`}>Song info and next in queue</div>
-        <div className='text-center col-span-3 w-full bg-red-400 h-16'>audio player</div>
+        <div className='text-center col-span-3 w-full bg-neutral-900 h-[5.5rem]'>
+          <MusicPlayer />
+        </div>
       </div>
     </Router>
   )
