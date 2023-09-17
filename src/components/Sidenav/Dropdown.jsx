@@ -25,7 +25,7 @@ export const Dropdown = () => {
   const [toggleDropdown, setToggleDropdown] = useToggle(false)
 
   return (
-    <div className='ml-auto'>
+    <div className='ml-auto z-10'>
       <button className='flex items-center gap-1 text-gray-300 hover:text-gray-100'
         onClick={setToggleDropdown}
       >
